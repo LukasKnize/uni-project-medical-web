@@ -1,0 +1,228 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+   font-family: "Inter", sans-serif;
+}
+
+/* Header */
+
+header{
+  width: calc(100% - 16px);
+  background-color: #1758D0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 8px;
+  padding-right: 8px;
+  height: 70px;
+}
+
+header h2 {
+  color: #fff;
+}
+
+header nav {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header nav img {
+  height: 40px;
+}
+
+/* Hero section*/
+
+main .hero {
+  height: calc(100vh - 70px);
+  background-image: url("/images/vitaly-gariev-EiL21cqvo58-unsplash.jpg");
+  background-size: cover;
+  position: relative;
+}
+
+main .hero .heroBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #1758d045;
+  width: 100%;
+  height: 100%;
+}
+
+main .hero h1 {
+  position: absolute;
+  top: 40%;
+  left: 0%;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+}
+
+main .hero img {
+  position: absolute;
+  top: 90%;
+  left: calc(50% - 20px);
+  height: 40px;
+}
+
+.aboutUs, .services, .news {
+  background-color: #EAEEF4;
+  width: 100%;
+  padding-top: 16px;
+  height: auto;
+}
+
+.headlineBox {
+  width: 200px;
+  height: 80px;
+  background-color: #C9D3E6;
+  color: #1758D0;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  margin-left: 16px;
+}
+
+.aboutUs p, .services p {
+  padding-top: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom: 16px;
+  text-align: justify;
+}
+
+.aboutUs img, .services img {
+  width: 100%;
+}
+
+/* button centering */
+.news {
+  text-align: center;
+}
+
+.newsPaperIcon {
+  width: 60px;
+  height: 60px;
+  background-color: #B3BCCC;
+  border-radius: 10px;
+  margin-top: 16px;
+  margin-left: 16px;
+}
+
+.news article {
+  background-color: #C9D3E6;
+  width: 90%;
+  display: flex;
+  margin-top: 16px;
+  min-height: 100px;
+  border-radius: 10px;
+}
+
+.news article p {
+  margin-top: 16px;
+  margin-left: 16px;
+  padding-right: 8px;
+  padding-bottom: 16px;
+}
+
+.news .newsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 16px;
+  text-align: left;
+}
+
+.news button {
+  width: 200px;
+  height: 60px;
+  background-color: #C9D3E6;
+  color: #1758D0;
+  border-radius: 10px;
+  margin-top: 16px;
+  border: none;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.news button:hover {
+  background-color: #B3BCCC;
+}
+
+.reservations{
+  margin-top: 16px;
+  background-color: #EAEEF4;
+  width: calc(90% - 16px);
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+  padding: 16px;
+  text-align: center;
+}
+
+.reservations .reserveRow {
+  display: flex;
+  align-items: center;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+.reservations .reserveRow img {
+  height: 40px;
+}
+
+.reservations .reserveRow a {
+  color: #000;
+  margin-left: 8px;
+}
+
+.reservations button {
+  width: 200px;
+  height: 60px;
+  background-color: #C9D3E6;
+  color: #1758D0;
+  border-radius: 10px;
+  margin-top: 16px;
+  border: none;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.reservations button:hover {
+  background-color: #B3BCCC;
+}
+
+footer {
+  margin-top: 16px;
+  background-color: #040f39;
+  color: #fff;
+  padding: 16px;
+}
+
+footer .linkSection {
+  display: flex;
+  flex-direction: column;
+  margin-top: 32px;
+}
+
+footer .linkSection a {
+  color: #fff;
+}
+
+footer .socialSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 32px;
+}
+
+footer .socialSection img {
+  height: 40px;
+}
