@@ -4,14 +4,15 @@
 }
 
 body {
-   font-family: "Inter", sans-serif;
+  font-family: "Inter", sans-serif;
+  scroll-behavior: smooth;
 }
 
 /* Header */
 
-header{
+header {
   width: calc(100% - 16px);
-  background-color: #1758D0;
+  background-color: #1758d0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -31,7 +32,13 @@ header nav {
   align-items: center;
 }
 
-header nav img {
+header nav button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+header nav button img {
   height: 40px;
 }
 
@@ -53,7 +60,7 @@ main .hero .heroBackground {
   height: 100%;
 }
 
-main .hero h1 {
+main .hero .heroHeadline {
   position: absolute;
   top: 40%;
   left: 0%;
@@ -67,10 +74,28 @@ main .hero img {
   top: 90%;
   left: calc(50% - 20px);
   height: 40px;
+  animation: arrowAnimation 3s ease-in-out infinite;
+  cursor: pointer;
 }
 
-.aboutUs, .services, .news {
-  background-color: #EAEEF4;
+@keyframes arrowAnimation {
+  0% {
+    top: 90%;
+  }
+
+  50% {
+    top: 88%;
+  }
+
+  100% {
+    top: 90%;
+  }
+}
+
+.aboutUs,
+.services,
+.news {
+  background-color: #eaeef4;
   width: 100%;
   padding-top: 16px;
   height: auto;
@@ -79,8 +104,8 @@ main .hero img {
 .headlineBox {
   width: 200px;
   height: 80px;
-  background-color: #C9D3E6;
-  color: #1758D0;
+  background-color: #c9d3e6;
+  color: #1758d0;
   border-radius: 10px;
   display: flex;
   align-items: center;
@@ -88,7 +113,8 @@ main .hero img {
   margin-left: 16px;
 }
 
-.aboutUs p, .services p {
+.aboutUs p,
+.services p {
   padding-top: 16px;
   padding-left: 16px;
   padding-right: 16px;
@@ -96,7 +122,8 @@ main .hero img {
   text-align: justify;
 }
 
-.aboutUs img, .services img {
+.aboutUs img,
+.services img {
   width: 100%;
 }
 
@@ -108,14 +135,14 @@ main .hero img {
 .newsPaperIcon {
   width: 60px;
   height: 60px;
-  background-color: #B3BCCC;
+  background-color: #b3bccc;
   border-radius: 10px;
   margin-top: 16px;
   margin-left: 16px;
 }
 
 .news article {
-  background-color: #C9D3E6;
+  background-color: #c9d3e6;
   width: 90%;
   display: flex;
   margin-top: 16px;
@@ -141,8 +168,8 @@ main .hero img {
 .news button {
   width: 200px;
   height: 60px;
-  background-color: #C9D3E6;
-  color: #1758D0;
+  background-color: #c9d3e6;
+  color: #1758d0;
   border-radius: 10px;
   margin-top: 16px;
   border: none;
@@ -152,12 +179,12 @@ main .hero img {
 }
 
 .news button:hover {
-  background-color: #B3BCCC;
+  background-color: #b3bccc;
 }
 
-.reservations{
+.reservations {
   margin-top: 16px;
-  background-color: #EAEEF4;
+  background-color: #eaeef4;
   width: calc(90% - 16px);
   margin-left: auto;
   margin-right: auto;
@@ -186,8 +213,8 @@ main .hero img {
 .reservations button {
   width: 200px;
   height: 60px;
-  background-color: #C9D3E6;
-  color: #1758D0;
+  background-color: #c9d3e6;
+  color: #1758d0;
   border-radius: 10px;
   margin-top: 16px;
   border: none;
@@ -196,7 +223,11 @@ main .hero img {
 }
 
 .reservations button:hover {
-  background-color: #B3BCCC;
+  background-color: #b3bccc;
+}
+
+.reservations .reservationsImage {
+  display: none;
 }
 
 footer {
@@ -210,6 +241,7 @@ footer .linkSection {
   display: flex;
   flex-direction: column;
   margin-top: 32px;
+  text-align: center;
 }
 
 footer .linkSection a {
@@ -225,4 +257,217 @@ footer .socialSection {
 
 footer .socialSection img {
   height: 40px;
+}
+
+#mobileMenu {
+  position: absolute;
+  top: 70px;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: #fff;
+  padding-top: 16px;
+  padding-bottom: 8px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#mobileMenu .mobileSearch {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+#mobileMenu .mobileSearch input {
+  padding: 10px;
+  border-radius: 25px;
+  border: 1px solid #e3e3e3;
+  -webkit-appearance: none;
+  margin-right: 6px;
+}
+
+#mobileMenu .mobileSearch input:active {
+  border: 1px solid #e3e3e3;
+}
+
+#mobileMenu .mobileSearch input:focus-visible {
+  outline: none;
+  border: 1px solid #e3e3e3;
+  box-shadow: inset 0 0 4px #1758d082;
+}
+
+#mobileMenu .mobileSearch button {
+  background-color: #c9d3e6;
+  border: none;
+  width: 45px;
+  height: 45px;
+  border-radius: 10px;
+}
+
+#mobileMenu .mobileSearch button:hover {
+  background-color: #b3bccc;
+}
+
+#mobileMenu .mobileSearch button img {
+  height: 20px;
+}
+
+.divider {
+  width: 90%;
+  border-bottom: 1px solid #e3e3e3;
+}
+
+#mobileMenu a {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: #1758d0;
+}
+
+.largeNav {
+  display: none;
+}
+
+@media (min-width: 950px) {
+  header {
+    height: 100px;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  header h2 {
+    width: 100%;
+  }
+
+  header nav {
+    width: 100%;
+    height: auto;
+  }
+
+  header nav button {
+    display: none;
+  }
+
+  .largeNav {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    max-width: 1100px;
+  }
+
+  .largeNav a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  main .hero {
+    height: calc(100vh - 100px);
+  }
+
+  footer .footerContent {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .aboutUs {
+    margin-top: 32px;
+    display: flex;
+    width: 95%;
+    padding-top: 0;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+  .aboutUs .contentBox {
+    width: 50%;
+  }
+
+  .aboutUs .contentBox .headlineBox {
+    margin-top: 16px;
+  }
+
+  .aboutUs img {
+    height: 100%;
+    width: 50%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+  .services {
+    margin-top: 32px;
+    display: flex;
+    width: 95%;
+    padding-top: 0;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    margin-top: 32px;
+    display: flex;
+    width: 95%;
+    padding-top: 0;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-left: auto;
+    margin-bottom: 32px;
+  }
+
+  .services .contentBox {
+    width: 50%;
+    order: 2;
+  }
+
+  .services .contentBox .headlineBox {
+    margin-top: 16px;
+  }
+
+  .services img {
+    order: 1;
+    height: 100%;
+    width: 50%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+
+  .reservations {
+    display: flex;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-right: 0;
+  }
+
+  .reservations .contentBox {
+    width: 65%;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  .reservations .reservationsImage {
+    width: 35%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: block;
+  }
+
+  .newsPaperIcon {
+    width: 60px;
+    height: 60px;
+    background-color: #b3bccc;
+    border-radius: 10px;
+    margin-top: 8px;
+    margin-left: 8px;
+    margin-bottom: 8px;
+  }
+
+  .news article {
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
+    min-height: unset;
+    border-radius: 10px;
+  }
+
+  .news article p {
+    padding: 0;
+    margin-top: 0;
+  }
 }

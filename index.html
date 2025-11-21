@@ -15,37 +15,73 @@
   <body>
     <header>
       <h2>VitaMed</h2>
-      <nav><img src="./icons/menu-svgrepo-com.svg" alt="" /></nav>
+      <nav>
+        <button onclick="showMenu()">
+          <img id="menuCloseButton" src="./icons/menu-svgrepo-com.svg" alt="" />
+        </button>
+        <div id="mobileMenu">
+          <div class="mobileSearch">
+            <input type="text" placeholder="vyhledat" /><button>
+              <img src="icons/search-5-svgrepo-com.svg" alt="vyhledat" />
+            </button>
+          </div>
+          <a href="">O náš</a>
+          <div class="divider"></div>
+          <a href="">Co poskytujeme</a>
+          <div class="divider"></div>
+          <a href="">Aktuality</a>
+          <div class="divider"></div>
+          <a href="">Náš tým</a>
+          <div class="divider"></div>
+          <a href="">Rezervace termínu</a>
+        </div>
+        <div class="largeNav">
+          <a href="">O náš</a>
+          <a href="">Co poskytujeme</a>
+          <a href="">Aktuality</a>
+          <a href="">Náš tým</a>
+          <a href="">Rezervace termínu</a>
+        </div>
+      </nav>
     </header>
     <main>
       <section class="hero">
         <div class="heroBackground"></div>
-        <h1>Hlavní nadpis</h1>
-        <img src="icons/caret-down-svgrepo-com.svg" alt="" />
+        <div class="heroHeadline">
+          <h1>VitaMed</h1>
+          <h2>Nejmodernější klinika v Evropě</h2>
+        </div>
+
+        <img id="scrollDown" src="icons/caret-down-svgrepo-com.svg" alt="" />
       </section>
       <section class="aboutUs">
-        <div class="headlineBox">
-          <h2>O nás</h2>
+        <div class="contentBox">
+          <div class="headlineBox">
+            <h2>O nás</h2>
+          </div>
+          <p>
+            VitaMed je moderní zdravotnické zařízení s důrazem na osobní přístup, špičkovou péči a
+            nejnovější medicínské technologie. Naším cílem je poskytovat komplexní služby pro celou
+            rodinu – od preventivních prohlídek přes specializovanou diagnostiku až po moderní
+            terapeutické metody. Náš tým zkušených odborníků je tu pro vás každý den s empatií,
+            ochotou a úsměvem.
+          </p>
         </div>
-        <p>
-          VitaMed je moderní zdravotnické zařízení s důrazem na osobní přístup, špičkovou péči a
-          nejnovější medicínské technologie. Naším cílem je poskytovat komplexní služby pro celou
-          rodinu – od preventivních prohlídek přes specializovanou diagnostiku až po moderní
-          terapeutické metody. Náš tým zkušených odborníků je tu pro vás každý den s empatií,
-          ochotou a úsměvem.
-        </p>
+
         <img src="images/arturo-esparza-ruHzyEwwZgo-unsplash.jpg" alt="" />
       </section>
       <section class="services">
-        <div class="headlineBox">
-          <h2>Co poskytujeme</h2>
+        <div class="contentBox">
+          <div class="headlineBox">
+            <h2>Co poskytujeme</h2>
+          </div>
+          <p>
+            Nabízíme profesionální preventivní prohlídky a kontroly. Poskytujeme očkování všeho
+            druhu. Provádíme profesionální odběry krve a další laboratorní vyšetření s rychlým
+            výsledkem. Díky naším šikovným doktorům vás za pomocí našich rehabilitacích a
+            fyzioterapiích postavíme zpátky na nohy!
+          </p>
         </div>
-        <p>
-          Nabízíme profesionální preventivní prohlídky a kontroly. Poskytujeme očkování všeho druhu.
-          Provádíme profesionální odběry krve a další laboratorní vyšetření s rychlým výsledkem.
-          Díky naším šikovným doktorům vás za pomocí našich rehabilitacích a fyzioterapiích
-          postavíme zpátky na nohy!
-        </p>
         <img src="images/arturo-esparza-ruHzyEwwZgo-unsplash.jpg" alt="" />
       </section>
       <section class="news">
@@ -77,44 +113,55 @@
         <button>Více článků</button>
       </section>
       <section class="reservations">
-        <p>
-          Nově si u nás můžete termín, kromě rezervace po telefonu či emailem, také sami
-          zarezervovat na našich webových stránkách.
-        </p>
-        <div class="reserveRow">
-          <img src="icons/mail-alt-3-svgrepo-com.svg" alt="e-mail" /><a
-            href="mailto:rezervace@vitamed.com"
-            >rezervace@vitamed.com</a
-          >
+        <div class="contentBox">
+          <p>
+            Nově si u nás můžete termín, kromě rezervace po telefonu či emailem, také sami
+            zarezervovat na našich webových stránkách.
+          </p>
+          <div class="reserveRow">
+            <img src="icons/mail-alt-3-svgrepo-com.svg" alt="e-mail" /><a
+              href="mailto:rezervace@vitamed.com"
+              >rezervace@vitamed.com</a
+            >
+          </div>
+          <div class="reserveRow">
+            <img src="icons/phone-svgrepo-com.svg" alt="telefon" /><a href="tel:+420 111 222 333"
+              >+420 111 222 333</a
+            >
+          </div>
+          <button>Rezervovat</button>
         </div>
-        <div class="reserveRow">
-          <img src="icons/phone-svgrepo-com.svg" alt="telefon" /><a href="tel:+420 111 222 333"
-            >+420 111 222 333</a
-          >
-        </div>
-        <button>Rezervovat</button>
+        <img
+          class="reservationsImage"
+          src="images/towfiqu-barbhuiya-bwOAixLG0uc-unsplash.jpg"
+          alt=""
+        />
       </section>
     </main>
 
     <footer>
-      <div class="infoSection">
-        <p>VitaMed | Nemocnická 100, 100 00 Nemocnice</p>
-        <p>Telefon: +420 111 222 333</p>
-        <p>Email: info@vitamed.cz</p>
-        <p>VitaMed s.r.o.</p>
-        <p>IČO: 12345678</p>
-        <p>DIČ: CZ12345678</p>
-      </div>
-      <div class="linkSection">
-        <a href="">O náš</a><a href="">Co poskytujeme</a><a href="">Aktuality</a
-        ><a href="">Náš tým</a><a href="">Rezervace termínu</a>
-      </div>
+      <div class="footerContent">
+        <div class="infoSection">
+          <p>VitaMed | Nemocnická 100, 100 00 Nemocnice</p>
+          <p>Telefon: +420 111 222 333</p>
+          <p>Email: info@vitamed.cz</p>
+          <p>VitaMed s.r.o.</p>
+          <p>IČO: 12345678</p>
+          <p>DIČ: CZ12345678</p>
+        </div>
+        <div class="linkSection">
+          <a href="">O náš</a><a href="">Co poskytujeme</a><a href="">Aktuality</a
+          ><a href="">Náš tým</a><a href="">Rezervace termínu</a>
+        </div>
 
-      <div class="socialSection">
-        <a href=""><img src="icons/linkedin-svgrepo-com(1).svg" alt="odkaz na LinkedIn" /></a>
-        <a href=""><img src="icons/facebook-svgrepo-com(1).svg" alt="odkaz na Facebook" /></a>
-        <a href=""><img src="icons/instagram-svgrepo-com(1).svg" alt="odkaz na Instageram" /></a>
+        <div class="socialSection">
+          <a href=""><img src="icons/linkedin-svgrepo-com(1).svg" alt="odkaz na LinkedIn" /></a>
+          <a href=""><img src="icons/facebook-svgrepo-com(1).svg" alt="odkaz na Facebook" /></a>
+          <a href=""><img src="icons/instagram-svgrepo-com(1).svg" alt="odkaz na Instageram" /></a>
+        </div>
       </div>
+      Semestrální práce předmětu Web design
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>
