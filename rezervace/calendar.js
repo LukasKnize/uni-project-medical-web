@@ -95,7 +95,7 @@ timePickerItems.forEach((timePickerItem) => {
     });
     const image = document.createElement("img");
     image.classList = "check";
-    image.src = "/icons/check-svgrepo-com.svg";
+    image.src = "https://lukasknize.github.io/uni-project-medical-web/icons/check-svgrepo-com.svg";
     event.target.appendChild(image);
   });
 });

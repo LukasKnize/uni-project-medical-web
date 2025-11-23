@@ -50,7 +50,7 @@ header nav button img {
 
 main .hero {
   height: calc(100vh - 70px);
-  background-image: url("/images/vitaly-gariev-EiL21cqvo58-unsplash.jpg");
+  background-image: url("https://lukasknize.github.io/uni-project-medical-web/images/vitaly-gariev-EiL21cqvo58-unsplash.jpg");
   background-size: cover;
   position: relative;
 }
@@ -671,7 +671,7 @@ form textarea {
 /* ---------------------------------------------------------------------- */
 
 main .heroDoctors {
-  background-image: url("/images/docHero.png");
+  background-image: url("https://lukasknize.github.io/uni-project-medical-web/images/docHero.png");
   background-position: center top;
 }
 
