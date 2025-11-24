@@ -21,7 +21,8 @@
         </button>
         <div id="mobileMenu">
           <div class="mobileSearch">
-            <input type="text" placeholder="vyhledat" /><button>
+            <input type="text" placeholder="vyhledat" id="mobileSearchBar" />
+            <button onclick="mobileSearch()">
               <img src="icons/search-5-svgrepo-com.svg" alt="vyhledat" />
             </button>
           </div>
@@ -29,7 +30,7 @@
           <div class="divider"></div>
           <a href="">Co poskytujeme</a>
           <div class="divider"></div>
-          <a href="">Aktuality</a>
+          <a href="/aktuality/">Aktuality</a>
           <div class="divider"></div>
           <a href="/doktori/">Náš tým</a>
           <div class="divider"></div>
@@ -38,7 +39,7 @@
         <div class="largeNav">
           <a href="">O náš</a>
           <a href="">Co poskytujeme</a>
-          <a href="">Aktuality</a>
+          <a href="/aktuality/">Aktuality</a>
           <a href="/doktori/">Náš tým</a>
           <a href="/rezervace/">Rezervace termínu</a>
         </div>
@@ -91,26 +92,26 @@
         <div class="newsContainer">
           <article>
             <img src="icons/news-svgrepo-com.svg" alt="aktualita" class="newsPaperIcon" />
-            <p>
+            <a href="/aktuality/parkovani/">
               NOVÉ PARKOVIŠTĚ - Bylo zpřístupněno nové parkoviště pro návštěvníky a zaměstnance.
-            </p>
+            </a>
           </article>
           <article>
             <img src="icons/news-svgrepo-com.svg" alt="aktualita" class="newsPaperIcon" />
-            <p>
+            <a href="">
               LÉČBA KMENOVÝMI BUŇKAMI - Zahájili jsme moderní terapii pomocí kmenových buněk –
               šetrná metoda...
-            </p>
+            </a>
           </article>
           <article>
             <img src="icons/news-svgrepo-com.svg" alt="aktualita" class="newsPaperIcon" />
-            <p>
+            <a href="">
               LÉČBA KMENOVÝMI BUŇKAMI - Zahájili jsme moderní terapii pomocí kmenových buněk –
               šetrná metoda...
-            </p>
+            </a>
           </article>
         </div>
-        <button>Více článků</button>
+        <a href="/aktuality/"><button>Více článků</button></a>
       </section>
       <section class="reservations">
         <div class="contentBox">
@@ -150,7 +151,7 @@
           <p>DIČ: CZ12345678</p>
         </div>
         <div class="linkSection">
-          <a href="">O náš</a><a href="">Co poskytujeme</a><a href="">Aktuality</a
+          <a href="">O náš</a><a href="">Co poskytujeme</a><a href="/aktuality/">Aktuality</a
           ><a href="/doktori/">Náš tým</a><a href="/rezervace">Rezervace termínu</a>
         </div>
 
@@ -163,5 +164,6 @@
       Semestrální práce předmětu Web design
     </footer>
     <script src="script.js"></script>
+    <script src="./vyhledavani/search.js"></script>
   </body>
 </html>
