@@ -50,89 +50,42 @@
         </div>
       </nav>
     </header>
-    <main class="reservationsMain">
-      <form>
-        <div class="headlineBox">
-          <h2>Rezervujte si termín</h2>
-        </div>
-        <div class="dropDownInput">
-          <p id="dropDownText">Ošetřující lékař</p>
-          <button type="button" onclick="showDropDown()">
-            <img
-              src="https://lukasknize.github.io/uni-project-medical-web/icons/caret-down-svgrepo-com-dark.svg"
-              alt=""
-            />
-          </button>
-          <div id="dropDownList">
-            <button type="button" class="dropDownButton">Profesor MUDr. Karel Svoboda, CSc</button>
-            <button type="button" class="dropDownButton">MUDr. Anna Veselá, Ph.D</button>
-            <button type="button" class="dropDownButton">MUDr. Jakub Novotný</button>
-          </div>
-        </div>
-        <div class="formRow">
-          <input type="text" placeholder="Jméno" />
-          <input type="text" placeholder="Příjmení" />
-        </div>
-        <div class="formRow">
-          <input type="text" placeholder="E-mail" />
-          <input type="text" placeholder="telefon" />
+    <main class="searchResultsPage">
+      <section class="searchSection">
+        <input type="text" placeholder="vyhledat" id="mainSearchBar" />
+        <button onclick="mainSearch()">
+          <img
+            src="https://lukasknize.github.io/uni-project-medical-web/icons/search-5-svgrepo-com.svg"
+            alt="vyhledat"
+          />
+        </button>
+      </section>
+      <section class="results">
+        <div class="searhResult">
+          <a href="https://lukasknize.github.io/uni-project-medical-web/aktuality/nova_lecba"
+            ><h2>LÉČBA KMENOVÝMI BUŇKAMI</h2></a
+          >
+          <p>
+            Zahájili jsme moderní terapii pomocí kmenových buněk – šetrná metoda, která otevírá nové
+            možnosti v léčbě řady chronických i akutních zdravotních potíží. Tato inovativní
+            procedura využívá schopnost kmenových buněk regenerovat poškozené tkáně a podporovat
+            přirozené hojivé procesy v těle.
+          </p>
         </div>
 
-        <textarea placeholder="Poznámka"></textarea>
-      </form>
-      <div class="calendar">
-        <div class="calendarHeader">
-          <button onclick="prevMonth()">
-            <img
-              src="https://lukasknize.github.io/uni-project-medical-web/icons/left-2-svgrepo-com.svg"
-              alt="předchozí měsíc"
-            />
-          </button>
-          <p id="currentMonth">Leden 2025</p>
-          <button onclick="nextMonth()">
-            <img
-              src="https://lukasknize.github.io/uni-project-medical-web/icons/right-2-svgrepo-com.svg"
-              alt="následující měsíc"
-            />
-          </button>
+        <div class="searhResult">
+          <a href="https://lukasknize.github.io/uni-project-medical-web/aktuality/parkovani"
+            ><h2>NOVÉ PARKOVIŠTĚ</h2></a
+          >
+          <p>
+            Bylo zpřístupněno nové parkoviště pro návštěvníky a zaměstnance. Nový parkovací prostor
+            se nachází v těsné blízkosti hlavního vstupu kliniky a nabízí více než čtyřicet
+            prostorných míst, včetně vyhrazených stání pro osoby se sníženou pohyblivostí. Areál je
+            moderně osvětlen, monitorován kamerovým systémem a navržen tak, aby zajistil bezpečnost
+            a pohodlí všem příchozím.
+          </p>
         </div>
-        <div id="calendarBody"></div>
-        <div id="timePickerDialog" onclick="event.stopPropagation();">
-          <div class="timePickerItem">
-            <div class="checkBox"></div>
-            <p>7:00-8:00</p>
-          </div>
-          <div class="timePickerItem">
-            <div class="checkBox"></div>
-            <p>8:00-9:00</p>
-          </div>
-          <div class="timePickerItem">
-            <div class="checkBox"></div>
-            <p>9:00-10:00</p>
-          </div>
-          <div class="timePickerItem">
-            <div class="checkBox"></div>
-            <p>10:00-11:00</p>
-          </div>
-          <div class="timePickerItem">
-            <div class="checkBox"></div>
-            <p>11:00-12:00</p>
-          </div>
-          <div class="timePickerItem">
-            <div class="checkBox"></div>
-            <p>13:00-14:00</p>
-          </div>
-          <div class="timePickerItem">
-            <div class="checkBox"></div>
-            <p>14:00-15:00</p>
-          </div>
-          <div class="timePickerItem">
-            <div class="checkBox"></div>
-            <p>15:00-16:00</p>
-          </div>
-        </div>
-      </div>
-      <button class="submitButton">Rezervovat</button>
+      </section>
     </main>
     <footer>
       <div class="footerContent">
@@ -174,7 +127,6 @@
       Semestrální práce předmětu Web design
     </footer>
     <script src="https://lukasknize.github.io/uni-project-medical-web/script.js"></script>
-    <script src="https://lukasknize.github.io/uni-project-medical-web/rezervace/calendar.js"></script>
     <script src="https://lukasknize.github.io/uni-project-medical-web/vyhledavani/search.js"></script>
   </body>
 </html>

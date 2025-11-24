@@ -46,6 +46,10 @@ header nav button img {
   height: 40px;
 }
 
+main {
+  min-height: 100vh;
+}
+
 /* Hero section*/
 
 main .hero {
@@ -154,11 +158,13 @@ main .hero img {
   border-radius: 10px;
 }
 
-.news article p {
+.news article a {
   margin-top: 16px;
   margin-left: 16px;
   padding-right: 8px;
   padding-bottom: 16px;
+  text-decoration: none;
+  color: #000;
 }
 
 .news .newsContainer {
@@ -759,5 +765,118 @@ main .heroDoctors {
     border-bottom-left-radius: 10px;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
+  }
+}
+
+/* ---------------------------------------------------------------------- */
+/* Search Page                                                            */
+/* ---------------------------------------------------------------------- */
+
+.searchResultsPage .searchSection {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.searchResultsPage .searchSection input {
+  padding: 10px;
+  border-radius: 25px;
+  border: 1px solid #e3e3e3;
+  margin-right: 6px;
+  width: calc(85% - 45px);
+}
+
+.searchResultsPage .searchSection input:active {
+  border: 1px solid #e3e3e3;
+}
+
+.searchResultsPage .searchSection input:focus-visible {
+  outline: none;
+  border: 1px solid #e3e3e3;
+  box-shadow: inset 0 0 4px #1758d082;
+}
+
+.searchResultsPage .searchSection button {
+  background-color: #c9d3e6;
+  border: none;
+  width: 45px;
+  height: 45px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.searchResultsPage .searchSection button:hover {
+  background-color: #b3bccc;
+}
+
+.searchResultsPage .searchSection button img {
+  height: 20px;
+}
+
+.results {
+  padding: 16px;
+  max-width: 875px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.results .searhResult a {
+  color: #1758d0;
+}
+
+.results .searhResult p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+/* ---------------------------------------------------------------------- */
+/* Articles Page                                                          */
+/* ---------------------------------------------------------------------- */
+
+.articles {
+  padding: 16px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.articles article {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 16px;
+}
+
+.articles article h1,
+.articles article p {
+  margin-bottom: 16px;
+}
+
+.articles img {
+  width: 100%;
+}
+
+.newsPage .news article:last-child {
+  margin-bottom: 16px;
+}
+
+@media (min-width: 950px) {
+  .articles {
+    display: flex;
+  }
+
+  .articles article {
+    width: 50%;
+  }
+
+  .articles img {
+    width: 50%;
   }
 }

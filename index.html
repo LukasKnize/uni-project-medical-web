@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>VitaMed | Nejmodernější klinika v Evropě</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://lukasknize.github.io/uni-project-medical-web/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,7 +14,7 @@
   </head>
   <body>
     <header>
-      <a href="https://lukasknize.github.io/uni-project-medical-web"><h2>VitaMed</h2></a>
+      <a href="#"><h2>VitaMed</h2></a>
       <nav>
         <button onclick="showMenu()">
           <img
@@ -25,7 +25,8 @@
         </button>
         <div id="mobileMenu">
           <div class="mobileSearch">
-            <input type="text" placeholder="vyhledat" /><button>
+            <input type="text" placeholder="vyhledat" id="mobileSearchBar" />
+            <button onclick="mobileSearch()">
               <img
                 src="https://lukasknize.github.io/uni-project-medical-web/icons/search-5-svgrepo-com.svg"
                 alt="vyhledat"
@@ -36,7 +37,7 @@
           <div class="divider"></div>
           <a href="">Co poskytujeme</a>
           <div class="divider"></div>
-          <a href="">Aktuality</a>
+          <a href="https://lukasknize.github.io/uni-project-medical-web/aktuality/">Aktuality</a>
           <div class="divider"></div>
           <a href="https://lukasknize.github.io/uni-project-medical-web/doktori/">Náš tým</a>
           <div class="divider"></div>
@@ -47,7 +48,7 @@
         <div class="largeNav">
           <a href="">O náš</a>
           <a href="">Co poskytujeme</a>
-          <a href="">Aktuality</a>
+          <a href="https://lukasknize.github.io/uni-project-medical-web/aktuality/">Aktuality</a>
           <a href="https://lukasknize.github.io/uni-project-medical-web/doktori/">Náš tým</a>
           <a href="https://lukasknize.github.io/uni-project-medical-web/rezervace/"
             >Rezervace termínu</a
@@ -116,9 +117,9 @@
               alt="aktualita"
               class="newsPaperIcon"
             />
-            <p>
+            <a href="https://lukasknize.github.io/uni-project-medical-web/aktuality/parkovani/">
               NOVÉ PARKOVIŠTĚ - Bylo zpřístupněno nové parkoviště pro návštěvníky a zaměstnance.
-            </p>
+            </a>
           </article>
           <article>
             <img
@@ -126,10 +127,10 @@
               alt="aktualita"
               class="newsPaperIcon"
             />
-            <p>
+            <a href="">
               LÉČBA KMENOVÝMI BUŇKAMI - Zahájili jsme moderní terapii pomocí kmenových buněk –
               šetrná metoda...
-            </p>
+            </a>
           </article>
           <article>
             <img
@@ -137,13 +138,15 @@
               alt="aktualita"
               class="newsPaperIcon"
             />
-            <p>
+            <a href="https://lukasknize.github.io/uni-project-medical-web/aktuality/nova_lecba">
               LÉČBA KMENOVÝMI BUŇKAMI - Zahájili jsme moderní terapii pomocí kmenových buněk –
               šetrná metoda...
-            </p>
+            </a>
           </article>
         </div>
-        <button>Více článků</button>
+        <a href="https://lukasknize.github.io/uni-project-medical-web/aktuality/"
+          ><button>Více článků</button></a
+        >
       </section>
       <section class="reservations">
         <div class="contentBox">
@@ -186,7 +189,8 @@
           <p>DIČ: CZ12345678</p>
         </div>
         <div class="linkSection">
-          <a href="">O náš</a><a href="">Co poskytujeme</a><a href="">Aktuality</a
+          <a href="">O náš</a><a href="">Co poskytujeme</a
+          ><a href="https://lukasknize.github.io/uni-project-medical-web/aktuality/">Aktuality</a
           ><a href="https://lukasknize.github.io/uni-project-medical-web/doktori/">Náš tým</a
           ><a href="https://lukasknize.github.io/uni-project-medical-web/rezervace"
             >Rezervace termínu</a
@@ -194,25 +198,14 @@
         </div>
 
         <div class="socialSection">
-          <a href=""
-            ><img
-              src="https://lukasknize.github.io/uni-project-medical-web/icons/linkedin-svgrepo-com(1).svg"
-              alt="odkaz na LinkedIn"
-          /></a>
-          <a href=""
-            ><img
-              src="https://lukasknize.github.io/uni-project-medical-web/icons/facebook-svgrepo-com(1).svg"
-              alt="odkaz na Facebook"
-          /></a>
-          <a href=""
-            ><img
-              src="https://lukasknize.github.io/uni-project-medical-web/icons/instagram-svgrepo-com(1).svg"
-              alt="odkaz na Instageram"
-          /></a>
+          <a href=""><img src="icons/linkedin-svgrepo-com(1).svg" alt="odkaz na LinkedIn" /></a>
+          <a href=""><img src="icons/facebook-svgrepo-com(1).svg" alt="odkaz na Facebook" /></a>
+          <a href=""><img src="icons/instagram-svgrepo-com(1).svg" alt="odkaz na Instageram" /></a>
         </div>
       </div>
       Semestrální práce předmětu Web design
     </footer>
     <script src="https://lukasknize.github.io/uni-project-medical-web/script.js"></script>
+    <script src="https://lukasknize.github.io/uni-project-medical-web/vyhledavani/search.js"></script>
   </body>
 </html>
