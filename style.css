@@ -708,6 +708,23 @@ main .heroDoctors {
   max-height: 500px;
 }
 
+.doctorSection .contentBox button {
+  width: 200px;
+  height: 60px;
+  background-color: #c9d3e6;
+  color: #1758d0;
+  border-radius: 10px;
+  margin-top: 16px;
+  border: none;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-left: 16px;
+}
+
+.doctorSection .contentBox button:hover {
+  background-color: #b3bccc;
+}
+
 @media (min-width: 950px) {
   .doctorSection {
     margin-top: 32px;
@@ -878,5 +895,79 @@ main .heroDoctors {
 
   .articles img {
     width: 50%;
+    height: fit-content;
+  }
+}
+
+.breadCrumbs {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  height: 30px;
+}
+
+.breadCrumbs a {
+  color: #000;
+  text-decoration: none;
+}
+
+.breadCrumbs a img {
+  height: 25px;
+}
+
+.breadCrumbs .breadCrumbArrow {
+  transform: rotate(90deg);
+  height: 25px;
+}
+
+/* ---------------------------------------------------------------------- */
+/* Doctor Page                                                            */
+/* ---------------------------------------------------------------------- */
+
+.doctor {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-left: 16px;
+}
+
+.doctor section {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.doctor img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+}
+
+.doctor section a,
+.doctor section p,
+.doctor section h1 {
+  padding-bottom: 8px;
+}
+
+@media (min-width: 950px) {
+  .doctor {
+    flex-direction: row;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .doctor img {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+  }
+
+  .doctor section {
+    text-align: left;
+    align-items: start;
   }
 }
