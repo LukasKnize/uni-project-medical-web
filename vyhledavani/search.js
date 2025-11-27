@@ -23,3 +23,9 @@ const mobileSearchBar = document.querySelector("#mobileSearchBar");
 const mobileSearch = () => {
   search(mobileSearchBar.value);
 };
+
+const pcSearchBar = document.querySelector("#pcSearchBar");
+
+const pcSearch = () => {
+  search(pcSearchBar.value);
+};
