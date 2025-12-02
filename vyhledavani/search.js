@@ -1,5 +1,5 @@
 const search = (params) => {
-  let thisPage = new URL(location.origin + "/uni-project-medical-web/doktori/vyhledavani/");
+  let thisPage = new URL(location.origin + "/uni-project-medical-web/vyhledavani/");
   thisPage.searchParams.append("search", params);
   window.location.href = thisPage;
 };
@@ -29,4 +29,3 @@ const pcSearchBar = document.querySelector("#pcSearchBar");
 const pcSearch = () => {
   search(pcSearchBar.value);
 };
-
