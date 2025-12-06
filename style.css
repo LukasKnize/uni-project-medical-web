@@ -118,7 +118,7 @@ main {
 
 main .hero {
   height: calc(100vh - var(--header-height-mobile));
-  background-image: url("/images/vitaly-gariev-EiL21cqvo58-unsplash.jpg");
+  background-image: url("https://lukasknize.github.io/uni-project-medical-web/images/vitaly-gariev-EiL21cqvo58-unsplash.jpg");
   background-size: cover;
   position: relative;
 }
@@ -826,7 +826,7 @@ form textarea {
 /* ---------------------------------------------------------------------- */
 
 main .heroDoctors {
-  background-image: url("/images/psychologist-9988009_1280.jpg");
+  background-image: url("https://lukasknize.github.io/uni-project-medical-web/images/psychologist-9988009_1280.jpg");
   background-position: center top;
 }
 
