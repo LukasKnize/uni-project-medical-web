@@ -3,12 +3,10 @@ const showMenu = () => {
   const display = getComputedStyle(menuElement).display;
   if (display === "none") {
     menuElement.style.display = "flex";
-    document.querySelector("#menuCloseButton").src =
-      "https://lukasknize.github.io/uni-project-medical-web/icons/close-svgrepo-com.svg";
+    document.querySelector("#menuCloseButton").src = "/icons/close-svgrepo-com.svg";
   } else {
     menuElement.style.display = "none";
-    document.querySelector("#menuCloseButton").src =
-      "https://lukasknize.github.io/uni-project-medical-web/icons/menu-svgrepo-com.svg";
+    document.querySelector("#menuCloseButton").src = "/icons/menu-svgrepo-com.svg";
   }
 };
 

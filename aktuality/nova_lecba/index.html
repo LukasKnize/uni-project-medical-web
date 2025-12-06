@@ -4,12 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>VitaMed | Rezervujte si termín</title>
-    <link rel="stylesheet" href="https://lukasknize.github.io/uni-project-medical-web/style.css" />
+    <link rel="stylesheet" href="../../style.css" />
   </head>
   <body>
     <header>
-      <a href="https://lukasknize.github.io/uni-project-medical-web"><h2>VitaMed</h2></a>
+      <a href="../"><h2>VitaMed</h2></a>
       <div class="pcSearch">
+        <label for="pcSearchBar" class="visuallyHidden">Vyhledávání</label>
         <input type="text" placeholder="vyhledat" id="pcSearchBar" />
         <button onclick="pcSearch()">
           <img
@@ -19,15 +20,16 @@
         </button>
       </div>
       <nav>
-        <button onclick="showMenu()">
+        <button onclick="showMenu()" aria-label="menu">
           <img
             id="menuCloseButton"
             src="https://lukasknize.github.io/uni-project-medical-web/icons/menu-svgrepo-com.svg"
-            alt=""
+            alt="menu"
           />
         </button>
         <div id="mobileMenu">
           <div class="mobileSearch">
+            <label for="mobileSearchBar" class="visuallyHidden">Vyhledávání</label>
             <input type="text" placeholder="vyhledat" id="mobileSearchBar" />
             <button onclick="mobileSearch()">
               <img
@@ -36,31 +38,27 @@
               />
             </button>
           </div>
-          <a href="https://lukasknize.github.io/uni-project-medical-web/o_nas/">O nás</a>
+          <a href="../../o_nas/">O nás</a>
           <div class="divider"></div>
-          <a href="https://lukasknize.github.io/uni-project-medical-web/kontakt">Kontakt</a>
+          <a href="/kontakt/">Kontakt</a>
           <div class="divider"></div>
-          <a href="https://lukasknize.github.io/uni-project-medical-web/aktuality">Aktuality</a>
+          <a href="../">Aktuality</a>
           <div class="divider"></div>
-          <a href="https://lukasknize.github.io/uni-project-medical-web/doktori/">Náš tým</a>
+          <a href="../../doktori/">Náš tým</a>
           <div class="divider"></div>
-          <a href="https://lukasknize.github.io/uni-project-medical-web/rezervace/"
-            >Rezervace termínu</a
-          >
+          <a href="../../rezervace/">Rezervace termínu</a>
         </div>
         <div class="largeNav">
-          <a href="https://lukasknize.github.io/uni-project-medical-web/o_nas/">O nás</a>
-          <a href="https://lukasknize.github.io/uni-project-medical-web/kontakt">Kontakt</a>
-          <a href="https://lukasknize.github.io/uni-project-medical-web/aktuality">Aktuality</a>
-          <a href="https://lukasknize.github.io/uni-project-medical-web/doktori/">Náš tým</a>
-          <a href="https://lukasknize.github.io/uni-project-medical-web/rezervace/"
-            >Rezervace termínu</a
-          >
+          <a href="../../o_nas/">O nás</a>
+          <a href="/kontakt/">Kontakt</a>
+          <a href="../">Aktuality</a>
+          <a href="../../doktori/">Náš tým</a>
+          <a href="../../rezervace/">Rezervace termínu</a>
         </div>
       </nav>
     </header>
     <div class="breadCrumbs">
-      <a href="https://lukasknize.github.io/uni-project-medical-web"
+      <a href="../../"
         ><img
           src="https://lukasknize.github.io/uni-project-medical-web/icons/home-4-svgrepo-com.svg"
           alt="Domovská stránka"
@@ -68,18 +66,19 @@
       <img
         class="breadCrumbArrow"
         src="https://lukasknize.github.io/uni-project-medical-web/icons/caret-down-svgrepo-com-dark.svg"
-        alt=""
-      /><a href="https://lukasknize.github.io/uni-project-medical-web/aktuality">Aktuality</a>
+        alt="šipka"
+      /><a href="../">Aktuality</a>
       <img
         class="breadCrumbArrow"
         src="https://lukasknize.github.io/uni-project-medical-web/icons/caret-down-svgrepo-com-dark.svg"
-        alt=""
+        alt="šipka"
       />
       <p>LÉČBA KMENOVÝMI BUŇKAMI</p>
     </div>
     <main class="articles">
       <article>
         <h1>LÉČBA KMENOVÝMI BUŇKAMI</h1>
+        <time datetime="2025-10-03">3.10.2025</time>
         <p>
           Zahájili jsme moderní terapii pomocí kmenových buněk – šetrná metoda, která otevírá nové
           možnosti v léčbě řady chronických i akutních zdravotních potíží. Tato inovativní procedura
@@ -99,10 +98,12 @@
           nás, že tuto možnost můžeme nabídnout i u nás.
         </p>
       </article>
-      <img
-        src="https://lukasknize.github.io/uni-project-medical-web/images/cdc-wDxFn_dBEC0-unsplash.jpg"
-        alt=""
-      />
+      <aside>
+        <img
+          src="https://lukasknize.github.io/uni-project-medical-web/images/cdc-wDxFn_dBEC0-unsplash.jpg"
+          alt="ilustrační fotografie laboratorního vybavení"
+        />
+      </aside>
     </main>
     <footer>
       <div class="footerContent">
@@ -115,13 +116,8 @@
           <p>DIČ: CZ12345678</p>
         </div>
         <div class="linkSection">
-          <a href="https://lukasknize.github.io/uni-project-medical-web/o_nas/">O nás</a
-          ><a href="">Co poskytujeme</a
-          ><a href="https://lukasknize.github.io/uni-project-medical-web/aktuality">Aktuality</a
-          ><a href="https://lukasknize.github.io/uni-project-medical-web/doktori/">Náš tým</a
-          ><a href="https://lukasknize.github.io/uni-project-medical-web/rezervace/"
-            >Rezervace termínu</a
-          >
+          <a href="../../o_nas/">O nás</a><a href="/kontakt/">Kontakt</a><a href="../">Aktuality</a
+          ><a href="../../doktori/">Náš tým</a><a href="../../rezervace/">Rezervace termínu</a>
         </div>
 
         <div class="socialSection">
@@ -143,7 +139,7 @@
         </div>
       </div>
       Semestrální práce předmětu Web design. Vypracovali Richterová Simona, Petényiová Katarína a
-      Lukáš Kníže
+      Kníže Lukáš.
     </footer>
     <script src="https://lukasknize.github.io/uni-project-medical-web/script.js"></script>
     <script src="https://lukasknize.github.io/uni-project-medical-web/vyhledavani/search.js"></script>

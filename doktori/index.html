@@ -4,12 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>VitaMed | Rezervujte si termín</title>
-    <link rel="stylesheet" href="https://lukasknize.github.io/uni-project-medical-web/style.css" />
+    <link rel="stylesheet" href="../style.css" />
   </head>
   <body>
     <header>
-      <a href="https://lukasknize.github.io/uni-project-medical-web"><h2>VitaMed</h2></a>
+      <a href="../"><h2>VitaMed</h2></a>
       <div class="pcSearch">
+        <label for="pcSearchBar" class="visuallyHidden">Vyhledávání</label>
         <input type="text" placeholder="vyhledat" id="pcSearchBar" />
         <button onclick="pcSearch()">
           <img
@@ -19,15 +20,16 @@
         </button>
       </div>
       <nav>
-        <button onclick="showMenu()">
+        <button onclick="showMenu()" aria-label="menu">
           <img
             id="menuCloseButton"
             src="https://lukasknize.github.io/uni-project-medical-web/icons/menu-svgrepo-com.svg"
-            alt=""
+            alt="menu"
           />
         </button>
         <div id="mobileMenu">
           <div class="mobileSearch">
+            <label for="mobileSearchBar" class="visuallyHidden">Vyhledávání</label>
             <input type="text" placeholder="vyhledat" id="mobileSearchBar" />
             <button onclick="mobileSearch()">
               <img
@@ -36,26 +38,22 @@
               />
             </button>
           </div>
-          <a href="https://lukasknize.github.io/uni-project-medical-web/o_nas/">O nás</a>
+          <a href="../o_nas/">O nás</a>
           <div class="divider"></div>
-          <a href="https://lukasknize.github.io/uni-project-medical-web/kontakt">Kontakt</a>
+          <a href="/kontakt/">Kontakt</a>
           <div class="divider"></div>
-          <a href="https://lukasknize.github.io/uni-project-medical-web/aktuality/">Aktuality</a>
+          <a href="../aktuality/">Aktuality</a>
           <div class="divider"></div>
-          <a href="https://lukasknize.github.io/uni-project-medical-web/doktori">Náš tým</a>
+          <a href="#">Náš tým</a>
           <div class="divider"></div>
-          <a href="https://lukasknize.github.io/uni-project-medical-web/rezervace/"
-            >Rezervace termínu</a
-          >
+          <a href="../rezervace/">Rezervace termínu</a>
         </div>
         <div class="largeNav">
-          <a href="https://lukasknize.github.io/uni-project-medical-web/o_nas/">O nás</a>
-          <a href="https://lukasknize.github.io/uni-project-medical-web/kontakt">Kontakt</a>
-          <a href="https://lukasknize.github.io/uni-project-medical-web/aktuality/">Aktuality</a>
-          <a href="https://lukasknize.github.io/uni-project-medical-web/doktori">Náš tým</a>
-          <a href="https://lukasknize.github.io/uni-project-medical-web/rezervace/"
-            >Rezervace termínu</a
-          >
+          <a href="../o_nas/">O nás</a>
+          <a href="/kontakt/">Kontakt</a>
+          <a href="../aktuality/">Aktuality</a>
+          <a class="current" href="#">Náš tým</a>
+          <a href="../rezervace/">Rezervace termínu</a>
         </div>
       </nav>
     </header>
@@ -70,11 +68,11 @@
         <img
           id="scrollDown"
           src="https://lukasknize.github.io/uni-project-medical-web/icons/caret-down-svgrepo-com.svg"
-          alt=""
+          alt="přejít dolů"
         />
       </section>
       <div class="breadCrumbs">
-        <a href="https://lukasknize.github.io/uni-project-medical-web"
+        <a href="../"
           ><img
             src="https://lukasknize.github.io/uni-project-medical-web/icons/home-4-svgrepo-com.svg"
             alt="Domovská stránka"
@@ -82,7 +80,7 @@
         <img
           class="breadCrumbArrow"
           src="https://lukasknize.github.io/uni-project-medical-web/icons/caret-down-svgrepo-com-dark.svg"
-          alt=""
+          alt="šipka"
         />
         <p>Náš tým</p>
       </div>
@@ -98,12 +96,13 @@
             vyhledávaného lékaře pro komplexní srdeční problémy. Věnuje se také výzkumu nových
             léčebných metod.
           </p>
-          <a href="https://lukasknize.github.io/uni-project-medical-web/doktori/svoboda/"
-            ><button>Více</button></a
-          >
+          <a href="./svoboda/"><button>Více</button></a>
         </div>
 
-        <img src="https://lukasknize.github.io/uni-project-medical-web/images/doc1.png" alt="" />
+        <img
+          src="https://lukasknize.github.io/uni-project-medical-web/images/doc1.jpg"
+          alt="portrét Profesora MUDr. Karla Svobody, CSc"
+        />
       </section>
       <section class="doctorSection">
         <div class="contentBox">
@@ -117,11 +116,12 @@
             onemocnění a přináší do praxe nejnovější trendy s důrazem na přirozený vzhled a zdraví
             pleti.
           </p>
-          <a href="https://lukasknize.github.io/uni-project-medical-web/doktori/svoboda"
-            ><button>Více</button></a
-          >
+          <a href="./svoboda"><button>Více</button></a>
         </div>
-        <img src="https://lukasknize.github.io/uni-project-medical-web/images/doc2.png" alt="" />
+        <img
+          src="https://lukasknize.github.io/uni-project-medical-web/images/doc2.jpg"
+          alt="portrét MUDr. Anny Veselé, Ph.D"
+        />
       </section>
       <section class="doctorSection">
         <div class="contentBox">
@@ -135,12 +135,13 @@
             postupy. Pomáhá vrcholovým sportovcům i rekreačním pacientům rychle se vrátit k plné
             aktivitě.
           </p>
-          <a href="https://lukasknize.github.io/uni-project-medical-web/doktori/svoboda"
-            ><button>Více</button></a
-          >
+          <a href="./svoboda"><button>Více</button></a>
         </div>
 
-        <img src="https://lukasknize.github.io/uni-project-medical-web/images/doc3.jpg" alt="" />
+        <img
+          src="https://lukasknize.github.io/uni-project-medical-web/images/doc3.jpg"
+          alt="portrét MUDr. Jakuba Novotného"
+        />
       </section>
 
       <section class="reservations">
@@ -161,14 +162,12 @@
               alt="telefon"
             /><a href="tel:+420 111 222 333">+420 111 222 333</a>
           </div>
-          <a href="https://lukasknize.github.io/uni-project-medical-web/rezervace"
-            ><button>Rezervovat</button></a
-          >
+          <a href="../rezervace"><button>Rezervovat</button></a>
         </div>
         <img
           class="reservationsImage"
           src="https://lukasknize.github.io/uni-project-medical-web/images/towfiqu-barbhuiya-bwOAixLG0uc-unsplash.jpg"
-          alt=""
+          alt="ilustrační fotografie kalendáře"
         />
       </section>
     </main>
@@ -183,13 +182,9 @@
           <p>DIČ: CZ12345678</p>
         </div>
         <div class="linkSection">
-          <a href="https://lukasknize.github.io/uni-project-medical-web/o_nas/">O nás</a
-          ><a href="">Co poskytujeme</a
-          ><a href="https://lukasknize.github.io/uni-project-medical-web/aktuality/">Aktuality</a
-          ><a href="https://lukasknize.github.io/uni-project-medical-web/doktori">Náš tým</a
-          ><a href="https://lukasknize.github.io/uni-project-medical-web/rezervace/"
-            >Rezervace termínu</a
-          >
+          <a href="../o_nas/">O nás</a><a href="/kontakt/">Kontakt</a
+          ><a href="../aktuality/">Aktuality</a><a href="#">Náš tým</a
+          ><a href="../rezervace/">Rezervace termínu</a>
         </div>
 
         <div class="socialSection">
@@ -211,7 +206,7 @@
         </div>
       </div>
       Semestrální práce předmětu Web design. Vypracovali Richterová Simona, Petényiová Katarína a
-      Lukáš Kníže
+      Kníže Lukáš.
     </footer>
     <script src="https://lukasknize.github.io/uni-project-medical-web/script.js"></script>
     <script src="https://lukasknize.github.io/uni-project-medical-web/vyhledavani/search.js"></script>

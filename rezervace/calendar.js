@@ -18,18 +18,28 @@ let currentYear = 2025;
 
 const renderCalendar = () => {
   document.querySelector("#currentMonth").innerHTML = `${months[currentMonth]} ${currentYear}`;
-  document.querySelector("#calendarBody").innerHTML = "";
+  document.querySelectorAll(".calendarItem").forEach((item) => {
+    item.remove();
+  });
   for (let i = 1; i <= monthsLenght[currentMonth]; i++) {
     const calendarItem = document.createElement("div");
-    calendarItem.classList = "calendarItem";
-    calendarItem.addEventListener("click", (event) => {
-      const timePicker = document.querySelector("#timePickerDialog");
-      const display = getComputedStyle(timePicker).display;
-      if (display === "none") {
-        timePicker.style.display = "grid";
-        event.stopPropagation();
-      }
-    });
+
+    if (Math.random() > 0.7) {
+      calendarItem.classList = "calendarItem fullyReserverd";
+    } else {
+      calendarItem.classList = "calendarItem";
+      calendarItem.tabIndex = 0;
+      calendarItem.addEventListener("click", (event) => {
+        const timePicker = document.querySelector("#timePickerDialog");
+        const display = getComputedStyle(timePicker).display;
+        if (display === "none") {
+          timePicker.style.display = "grid";
+          event.stopPropagation();
+          document.querySelector(".checkBox").focus();
+        }
+      });
+    }
+
     const calendarText = document.createElement("p");
     calendarText.innerHTML = i;
     calendarItem.appendChild(calendarText);
@@ -95,7 +105,35 @@ timePickerItems.forEach((timePickerItem) => {
     });
     const image = document.createElement("img");
     image.classList = "check";
-    image.src = "https://lukasknize.github.io/uni-project-medical-web/icons/check-svgrepo-com.svg";
+    image.src = "/icons/check-svgrepo-com.svg";
     event.target.appendChild(image);
   });
 });
+
+document.addEventListener("keydown", (e) => reactKey(e));
+
+const reactKey = (evt) => {
+  if (evt.keyCode == 13 && document.activeElement.classList.contains("calendarItem")) {
+    const timePicker = document.querySelector("#timePickerDialog");
+    const display = getComputedStyle(timePicker).display;
+    if (display === "none") {
+      timePicker.style.display = "grid";
+      evt.stopPropagation();
+      document.querySelector(".checkBox").focus();
+    }
+  } else if (evt.keyCode == 13 && document.activeElement.classList.contains("checkBox")) {
+    const existingChecks = document.querySelectorAll(".check");
+    existingChecks.forEach((check) => {
+      check.remove();
+    });
+    const image = document.createElement("img");
+    image.classList = "check";
+    image.src = "/icons/check-svgrepo-com.svg";
+    document.activeElement.appendChild(image);
+  }
+};
+
+const submit = () => {
+  document.querySelector(".reservationConfirmation").style.display = "flex";
+  document.querySelector(".reservationsMain").style.display = "none";
+};

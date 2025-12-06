@@ -1,5 +1,5 @@
 const search = (params) => {
-  let thisPage = new URL(location.origin + "/uni-project-medical-web/vyhledavani/");
+  let thisPage = new URL(location.origin + "/vyhledavani/");
   thisPage.searchParams.append("search", params);
   window.location.href = thisPage;
 };
