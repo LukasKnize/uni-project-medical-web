@@ -10,17 +10,19 @@
     <header>
       <a href="../"><h2>VitaMed</h2></a>
       <div class="pcSearch">
+        <label for="pcSearchBar" class="visuallyHidden">Vyhledávání</label>
         <input type="text" placeholder="vyhledat" id="pcSearchBar" />
         <button onclick="pcSearch()">
           <img src="/icons/search-5-svgrepo-com.svg" alt="vyhledat" />
         </button>
       </div>
       <nav>
-        <button onclick="showMenu()">
-          <img id="menuCloseButton" src="/icons/menu-svgrepo-com.svg" alt="" />
+        <button onclick="showMenu()" aria-label="menu">
+          <img id="menuCloseButton" src="/icons/menu-svgrepo-com.svg" alt="šipka" />
         </button>
         <div id="mobileMenu">
           <div class="mobileSearch">
+            <label for="mobileSearchBar" class="visuallyHidden">Vyhledávání</label>
             <input type="text" placeholder="vyhledat" id="mobileSearchBar" />
             <button onclick="mobileSearch()">
               <img src="/icons/search-5-svgrepo-com.svg" alt="vyhledat" />
@@ -28,7 +30,7 @@
           </div>
           <a href="../o_nas/">O nás</a>
           <div class="divider"></div>
-          <a href="">Co poskytujeme</a>
+          <a href="/kontakt/">Kontakt</a>
           <div class="divider"></div>
           <a href="../aktuality/">Aktuality</a>
           <div class="divider"></div>
@@ -38,10 +40,10 @@
         </div>
         <div class="largeNav">
           <a href="../o_nas/">O nás</a>
-          <a href="">Co poskytujeme</a>
+          <a href="/kontakt/">Kontakt</a>
           <a href="../aktuality/">Aktuality</a>
           <a href="../doktori/">Náš tým</a>
-          <a href="../rezervace/">Rezervace termínu</a>
+          <a class="current" href="../rezervace/">Rezervace termínu</a>
         </div>
       </nav>
     </header>
@@ -53,7 +55,7 @@
         <div class="dropDownInput">
           <p id="dropDownText">Ošetřující lékař</p>
           <button type="button" onclick="showDropDown()">
-            <img src="/icons/caret-down-svgrepo-com-dark.svg" alt="" />
+            <img src="/icons/caret-down-svgrepo-com-dark.svg" alt="otevřít nabídku lékařů" />
           </button>
           <div id="dropDownList">
             <button type="button" class="dropDownButton">Profesor MUDr. Karel Svoboda, CSc</button>
@@ -62,63 +64,86 @@
           </div>
         </div>
         <div class="formRow">
-          <input type="text" placeholder="Jméno" />
-          <input type="text" placeholder="Příjmení" />
+          <div class="formItem">
+            <label for="firstname">Jméno</label>
+            <input type="text" placeholder="Jméno" id="firstname" />
+          </div>
+          <div class="formItem">
+            <label for="lastname">Přijmení</label>
+            <input type="text" placeholder="Příjmení" id="lastname" />
+          </div>
         </div>
         <div class="formRow">
-          <input type="text" placeholder="E-mail" />
-          <input type="text" placeholder="telefon" />
+          <div class="formItem">
+            <label for="email">E-mail</label>
+            <input type="text" placeholder="E-mail" id="email" />
+          </div>
+          <div class="formItem">
+            <label for="phone">Telefon</label>
+            <input type="text" placeholder="Telefon" id="phone" />
+          </div>
         </div>
-
-        <textarea placeholder="Poznámka"></textarea>
+        <div class="formRow">
+          <div class="formItem">
+            <label for="note">Poznámka</label>
+            <textarea placeholder="Poznámka" id="note"></textarea>
+          </div>
+        </div>
       </form>
       <div class="calendar">
-        <div class="calendarHeader">
-          <button onclick="prevMonth()">
+        <div id="calendarBody">
+          <button onclick="prevMonth(event)">
             <img src="/icons/left-2-svgrepo-com.svg" alt="předchozí měsíc" />
           </button>
           <p id="currentMonth">Leden 2025</p>
-          <button onclick="nextMonth()">
+          <button onclick="nextMonth(event)">
             <img src="/icons/right-2-svgrepo-com.svg" alt="následující měsíc" />
           </button>
         </div>
-        <div id="calendarBody"></div>
         <div id="timePickerDialog" onclick="event.stopPropagation();">
           <div class="timePickerItem">
-            <div class="checkBox"></div>
+            <div class="checkBox" tabindex="1" aria-label="vybrat 7:00-8:00"></div>
             <p>7:00-8:00</p>
           </div>
           <div class="timePickerItem">
-            <div class="checkBox"></div>
+            <div class="checkBox" tabindex="1" aria-label="vybrat 7:00-8:00"></div>
             <p>8:00-9:00</p>
           </div>
           <div class="timePickerItem">
-            <div class="checkBox"></div>
+            <div class="checkBox" tabindex="1" aria-label="vybrat 9:00-10:00"></div>
             <p>9:00-10:00</p>
           </div>
           <div class="timePickerItem">
-            <div class="checkBox"></div>
+            <div class="checkBox" tabindex="1" aria-label="vybrat 10:00-11:00"></div>
             <p>10:00-11:00</p>
           </div>
           <div class="timePickerItem">
-            <div class="checkBox"></div>
+            <div class="checkBox" tabindex="1" aria-label="vybrat 11:00-12:00"></div>
             <p>11:00-12:00</p>
           </div>
           <div class="timePickerItem">
-            <div class="checkBox"></div>
+            <div class="checkBox" tabindex="1" aria-label="vybrat 13:00-14:00"></div>
             <p>13:00-14:00</p>
           </div>
           <div class="timePickerItem">
-            <div class="checkBox"></div>
+            <div class="checkBox" tabindex="1" aria-label="vybrat 14:00-15:00"></div>
             <p>14:00-15:00</p>
           </div>
           <div class="timePickerItem">
-            <div class="checkBox"></div>
+            <div class="checkBox" tabindex="1" aria-label="vybrat 15:00-16:00"></div>
             <p>15:00-16:00</p>
           </div>
         </div>
       </div>
-      <button class="submitButton">Rezervovat</button>
+      <button class="submitButton" onclick="submit()">Rezervovat</button>
+    </main>
+    <main class="reservationConfirmation">
+      <img src="/icons/check-circle-svgrepo-com.svg" alt="ikonka potvrzení rezervace" />
+      <h2>Potvrzení rezervace</h2>
+      <p>
+        Vaše rezervace byla zaregistrována v systému a potvrzení naleznete ve své E-mailové
+        schránce.
+      </p>
     </main>
     <footer>
       <div class="footerContent">
@@ -131,7 +156,7 @@
           <p>DIČ: CZ12345678</p>
         </div>
         <div class="linkSection">
-          <a href="../o_nas/">O nás</a><a href="">Co poskytujeme</a
+          <a href="../o_nas/">O nás</a><a href="/kontakt/">Kontakt</a
           ><a href="../aktuality/">Aktuality</a><a href="../doktori/">Náš tým</a
           ><a href="../rezervace/">Rezervace termínu</a>
         </div>
@@ -142,7 +167,8 @@
           <a href=""><img src="/icons/instagram-svgrepo-com(1).svg" alt="odkaz na Instageram" /></a>
         </div>
       </div>
-      Semestrální práce předmětu Web design
+      Semestrální práce předmětu Web design. Vypracovali Richterová Simona, Petényiová Katarína a
+      Kníže Lukáš.
     </footer>
     <script src="../script.js"></script>
     <script src="./calendar.js"></script>

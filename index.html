@@ -16,25 +16,27 @@
     <header>
       <a href="#"><h2>VitaMed</h2></a>
       <div class="pcSearch">
+        <label for="pcSearchBar" class="visuallyHidden">Vyhledávání</label>
         <input type="text" placeholder="vyhledat" id="pcSearchBar" />
         <button onclick="pcSearch()">
-          <img src="icons/search-5-svgrepo-com.svg" alt="vyhledat" />
+          <img src="/icons/search-5-svgrepo-com.svg" alt="vyhledat" />
         </button>
       </div>
       <nav>
-        <button onclick="showMenu()">
-          <img id="menuCloseButton" src="./icons/menu-svgrepo-com.svg" alt="" />
+        <button onclick="showMenu()" aria-label="menu">
+          <img id="menuCloseButton" src="/icons/menu-svgrepo-com.svg" alt="menu" />
         </button>
         <div id="mobileMenu">
           <div class="mobileSearch">
+            <label for="mobileSearchBar" class="visuallyHidden">Vyhledávání</label>
             <input type="text" placeholder="vyhledat" id="mobileSearchBar" />
             <button onclick="mobileSearch()">
-              <img src="icons/search-5-svgrepo-com.svg" alt="vyhledat" />
+              <img src="/icons/search-5-svgrepo-com.svg" alt="vyhledat" />
             </button>
           </div>
           <a href="/o_nas/">O nás</a>
           <div class="divider"></div>
-          <a href="">Co poskytujeme</a>
+          <a href="/kontakt/">Kontakt</a>
           <div class="divider"></div>
           <a href="/aktuality/">Aktuality</a>
           <div class="divider"></div>
@@ -44,7 +46,7 @@
         </div>
         <div class="largeNav">
           <a href="/o_nas/">O nás</a>
-          <a href="">Co poskytujeme</a>
+          <a href="/kontakt/">Kontakt</a>
           <a href="/aktuality/">Aktuality</a>
           <a href="/doktori/">Náš tým</a>
           <a href="/rezervace/">Rezervace termínu</a>
@@ -59,7 +61,7 @@
           <h2>Nejmodernější klinika v Evropě</h2>
         </div>
 
-        <img id="scrollDown" src="icons/caret-down-svgrepo-com.svg" alt="" />
+        <img id="scrollDown" src="/icons/caret-down-svgrepo-com.svg" alt="přejít dolů" />
       </section>
       <section class="aboutUs">
         <div class="contentBox">
@@ -75,7 +77,10 @@
           </p>
         </div>
 
-        <img src="images/arturo-esparza-ruHzyEwwZgo-unsplash.jpg" alt="" />
+        <img
+          src="/images/arturo-esparza-ruHzyEwwZgo-unsplash.jpg"
+          alt="fotografie ze zdravotního zařízení"
+        />
       </section>
       <section class="services">
         <div class="contentBox">
@@ -89,7 +94,10 @@
             fyzioterapiích postavíme zpátky na nohy!
           </p>
         </div>
-        <img src="images/arturo-esparza-ruHzyEwwZgo-unsplash.jpg" alt="" />
+        <img
+          src="/images/national-cancer-institute-NFvdKIhxYlU-unsplash.jpg"
+          alt="ilustrační fotografie laptopu a zdravotního vybavení"
+        />
       </section>
       <section class="news">
         <div class="headlineBox">
@@ -103,14 +111,14 @@
             </a>
           </article>
           <article>
-            <img src="icons/news-svgrepo-com.svg" alt="aktualita" class="newsPaperIcon" />
+            <img src="/icons/news-svgrepo-com.svg" alt="aktualita" class="newsPaperIcon" />
             <a href="">
               LÉČBA KMENOVÝMI BUŇKAMI - Zahájili jsme moderní terapii pomocí kmenových buněk –
               šetrná metoda...
             </a>
           </article>
           <article>
-            <img src="icons/news-svgrepo-com.svg" alt="aktualita" class="newsPaperIcon" />
+            <img src="/icons/news-svgrepo-com.svg" alt="aktualita" class="newsPaperIcon" />
             <a href="">
               LÉČBA KMENOVÝMI BUŇKAMI - Zahájili jsme moderní terapii pomocí kmenových buněk –
               šetrná metoda...
@@ -126,13 +134,13 @@
             zarezervovat na našich webových stránkách.
           </p>
           <div class="reserveRow">
-            <img src="icons/mail-alt-3-svgrepo-com.svg" alt="e-mail" /><a
+            <img src="/icons/mail-alt-3-svgrepo-com.svg" alt="e-mail" /><a
               href="mailto:rezervace@vitamed.com"
               >rezervace@vitamed.com</a
             >
           </div>
           <div class="reserveRow">
-            <img src="icons/phone-svgrepo-com.svg" alt="telefon" /><a href="tel:+420 111 222 333"
+            <img src="/icons/phone-svgrepo-com.svg" alt="telefon" /><a href="tel:+420 111 222 333"
               >+420 111 222 333</a
             >
           </div>
@@ -140,8 +148,8 @@
         </div>
         <img
           class="reservationsImage"
-          src="images/towfiqu-barbhuiya-bwOAixLG0uc-unsplash.jpg"
-          alt=""
+          src="/images/towfiqu-barbhuiya-bwOAixLG0uc-unsplash.jpg"
+          alt="ilustrační fotografie kalendáře"
         />
       </section>
     </main>
@@ -157,8 +165,9 @@
           <p>DIČ: CZ12345678</p>
         </div>
         <div class="linkSection">
-          <a href="o_nas/">O nás</a><a href="">Co poskytujeme</a><a href="/aktuality/">Aktuality</a
-          ><a href="/doktori/">Náš tým</a><a href="/rezervace">Rezervace termínu</a>
+          <a href="/o_nas/">O nás</a><a href="/kontakt/">Kontakt</a
+          ><a href="/aktuality/">Aktuality</a><a href="/doktori/">Náš tým</a
+          ><a href="/rezervace">Rezervace termínu</a>
         </div>
 
         <div class="socialSection">
@@ -167,9 +176,10 @@
           <a href=""><img src="icons/instagram-svgrepo-com(1).svg" alt="odkaz na Instageram" /></a>
         </div>
       </div>
-      Semestrální práce předmětu Web design
+      Semestrální práce předmětu Web design. Vypracovali Richterová Simona, Petényiová Katarína a
+      Kníže Lukáš.
     </footer>
     <script src="script.js"></script>
-    <script src="./vyhledavani/search.js"></script>
+    <script src="/vyhledavani/search.js"></script>
   </body>
 </html>
